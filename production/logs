@@ -1,0 +1,637 @@
+
+
+Upgrade
+
+
+
+
+Sign in
+
+production-loki-1
+grafana/loki:latest
+RUNNING
+
+
+
+
+
+2022-03-11 22:29:37.356783 I | proto: duplicate proto type registered: purgeplan.DeletePlan
+
+2022-03-11 22:29:37.356881 I | proto: duplicate proto type registered: purgeplan.ChunksGroup
+
+2022-03-11 22:29:37.356886 I | proto: duplicate proto type registered: purgeplan.ChunkDetails
+
+2022-03-11 22:29:37.356890 I | proto: duplicate proto type registered: purgeplan.Interval
+
+2022-03-11 22:29:37.376471 I | proto: duplicate proto type registered: grpc.PutChunksRequest
+
+2022-03-11 22:29:37.376503 I | proto: duplicate proto type registered: grpc.GetChunksRequest
+
+2022-03-11 22:29:37.376513 I | proto: duplicate proto type registered: grpc.GetChunksResponse
+
+2022-03-11 22:29:37.376522 I | proto: duplicate proto type registered: grpc.Chunk
+
+2022-03-11 22:29:37.376530 I | proto: duplicate proto type registered: grpc.ChunkID
+
+2022-03-11 22:29:37.376539 I | proto: duplicate proto type registered: grpc.DeleteTableRequest
+
+2022-03-11 22:29:37.376547 I | proto: duplicate proto type registered: grpc.DescribeTableRequest
+
+2022-03-11 22:29:37.376555 I | proto: duplicate proto type registered: grpc.WriteBatch
+
+2022-03-11 22:29:37.376563 I | proto: duplicate proto type registered: grpc.WriteIndexRequest
+
+2022-03-11 22:29:37.376571 I | proto: duplicate proto type registered: grpc.DeleteIndexRequest
+
+2022-03-11 22:29:37.376578 I | proto: duplicate proto type registered: grpc.QueryIndexResponse
+
+2022-03-11 22:29:37.376587 I | proto: duplicate proto type registered: grpc.Row
+
+2022-03-11 22:29:37.376595 I | proto: duplicate proto type registered: grpc.IndexEntry
+
+2022-03-11 22:29:37.376603 I | proto: duplicate proto type registered: grpc.QueryIndexRequest
+
+2022-03-11 22:29:37.376611 I | proto: duplicate proto type registered: grpc.UpdateTableRequest
+
+2022-03-11 22:29:37.376687 I | proto: duplicate proto type registered: grpc.DescribeTableResponse
+
+2022-03-11 22:29:37.376715 I | proto: duplicate proto type registered: grpc.CreateTableRequest
+
+2022-03-11 22:29:37.376723 I | proto: duplicate proto type registered: grpc.TableDesc
+
+2022-03-11 22:29:37.376731 I | proto: duplicate proto type registered: grpc.TableDesc.TagsEntry
+
+2022-03-11 22:29:37.376738 I | proto: duplicate proto type registered: grpc.ListTablesResponse
+
+2022-03-11 22:29:37.376745 I | proto: duplicate proto type registered: grpc.Labels
+
+2022-03-11 22:29:37.376828 I | proto: duplicate proto type registered: storage.Entry
+
+2022-03-11 22:29:37.376839 I | proto: duplicate proto type registered: storage.ReadBatch
+
+level=info ts=2022-03-11T22:29:37.390161176Z caller=main.go:94 msg="Starting Loki" version="(version=2.4.2, branch=HEAD, revision=525040a32)"
+
+level=info ts=2022-03-11T22:29:37.390369593Z caller=modules.go:573 msg="RulerStorage is not configured in single binary mode and will not be started."
+
+level=info ts=2022-03-11T22:29:37.390955676Z caller=server.go:260 http=[::]:3100 grpc=[::]:9095 msg="server listening on addresses"
+
+level=info ts=2022-03-11T22:29:37.391227634Z caller=memberlist_client.go:394 msg="Using memberlist cluster node name" name=cbd65d4d573a-3fdc4a21
+
+level=warn ts=2022-03-11T22:29:37.392545718Z caller=experimental.go:19 msg="experimental feature in use" feature="In-memory (FIFO) cache"
+
+level=info ts=2022-03-11T22:29:37.392968468Z caller=shipper_index_client.go:108 msg="starting boltdb shipper in 0 mode"
+
+level=info ts=2022-03-11T22:29:37.393027926Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:29:37.393748176Z caller=worker.go:109 msg="Starting querier worker using query-scheduler and scheduler ring for addresses"
+
+level=info ts=2022-03-11T22:29:37.394522509Z caller=modules.go:598 msg="RulerStorage is nil.  Not starting the ruler."
+
+level=info ts=2022-03-11T22:29:37.395803176Z caller=module_service.go:64 msg=initialising module=memberlist-kv
+
+level=info ts=2022-03-11T22:29:37.395877759Z caller=module_service.go:64 msg=initialising module=server
+
+level=info ts=2022-03-11T22:29:37.395985218Z caller=module_service.go:64 msg=initialising module=query-scheduler
+
+level=info ts=2022-03-11T22:29:37.396050176Z caller=module_service.go:64 msg=initialising module=store
+
+level=info ts=2022-03-11T22:29:37.396112468Z caller=module_service.go:64 msg=initialising module=ingester
+
+level=info ts=2022-03-11T22:29:37.396130718Z caller=ingester.go:353 msg="recovering from checkpoint"
+
+level=info ts=2022-03-11T22:29:37.396188634Z caller=recovery.go:73 msg="no checkpoint found, treating as no-op"
+
+level=info ts=2022-03-11T22:29:37.396211884Z caller=ingester.go:369 msg="recovered WAL checkpoint recovery finished" elapsed=85.416µs errors=false
+
+level=info ts=2022-03-11T22:29:37.396235093Z caller=ingester.go:375 msg="recovering from WAL"
+
+level=info ts=2022-03-11T22:29:37.396164676Z caller=ring.go:281 msg="ring doesn't exist in KV store yet"
+
+level=info ts=2022-03-11T22:29:37.396309551Z caller=module_service.go:64 msg=initialising module=compactor
+
+level=info ts=2022-03-11T22:29:37.396354718Z caller=ring.go:281 msg="ring doesn't exist in KV store yet"
+
+level=info ts=2022-03-11T22:29:37.396539426Z caller=basic_lifecycler.go:252 msg="instance not found in the ring" instance=cbd65d4d573a ring=compactor
+
+level=info ts=2022-03-11T22:29:37.396559843Z caller=basic_lifecycler_delegates.go:63 msg="not loading tokens from file, tokens file path is empty"
+
+level=info ts=2022-03-11T22:29:37.396617551Z caller=ingester.go:391 msg="WAL segment recovery finished" elapsed=489.333µs errors=false
+
+level=info ts=2022-03-11T22:29:37.396764009Z caller=ingester.go:339 msg="closing recoverer"
+
+level=info ts=2022-03-11T22:29:37.396776301Z caller=ingester.go:347 msg="WAL recovery finished" time=649.708µs
+
+level=info ts=2022-03-11T22:29:37.396813134Z caller=lifecycler.go:540 msg="not loading tokens from file, tokens file path is empty"
+
+level=info ts=2022-03-11T22:29:37.396837301Z caller=lifecycler.go:569 msg="instance not found in ring, adding with no tokens" ring=ingester
+
+level=info ts=2022-03-11T22:29:37.396886259Z caller=lifecycler.go:416 msg="auto-joining cluster after timeout" ring=ingester
+
+level=info ts=2022-03-11T22:29:37.396991134Z caller=compactor.go:245 msg="waiting until compactor is JOINING in the ring"
+
+level=info ts=2022-03-11T22:29:37.397033176Z caller=wal.go:156 msg=started component=wal
+
+level=info ts=2022-03-11T22:29:37.397245301Z caller=module_service.go:64 msg=initialising module=ring
+
+level=info ts=2022-03-11T22:29:37.397263509Z caller=module_service.go:64 msg=initialising module=query-frontend-tripperware
+
+level=info ts=2022-03-11T22:29:37.398165426Z caller=module_service.go:64 msg=initialising module=distributor
+
+level=info ts=2022-03-11T22:29:37.398302218Z caller=module_service.go:64 msg=initialising module=ingester-querier
+
+level=info ts=2022-03-11T22:29:37.398325634Z caller=lifecycler.go:540 msg="not loading tokens from file, tokens file path is empty"
+
+level=info ts=2022-03-11T22:29:37.398340926Z caller=lifecycler.go:569 msg="instance not found in ring, adding with no tokens" ring=distributor
+
+level=info ts=2022-03-11T22:29:37.398448468Z caller=lifecycler.go:416 msg="auto-joining cluster after timeout" ring=distributor
+
+level=info ts=2022-03-11T22:29:37.398471259Z caller=basic_lifecycler.go:252 msg="instance not found in the ring" instance=cbd65d4d573a ring=scheduler
+
+level=info ts=2022-03-11T22:29:37.398499509Z caller=basic_lifecycler_delegates.go:63 msg="not loading tokens from file, tokens file path is empty"
+
+level=info ts=2022-03-11T22:29:37.398563884Z caller=memberlist_client.go:506 msg="joined memberlist cluster" reached_nodes=1
+
+level=info ts=2022-03-11T22:29:37.398608426Z caller=scheduler.go:611 msg="waiting until scheduler is JOINING in the ring"
+
+level=info ts=2022-03-11T22:29:37.398615343Z caller=scheduler.go:615 msg="scheduler is JOINING in the ring"
+
+level=info ts=2022-03-11T22:29:37.562369343Z caller=compactor.go:249 msg="compactor is JOINING in the ring"
+
+level=info ts=2022-03-11T22:29:38.399675843Z caller=scheduler.go:625 msg="waiting until scheduler is ACTIVE in the ring"
+
+level=info ts=2022-03-11T22:29:38.529817218Z caller=scheduler.go:629 msg="scheduler is ACTIVE in the ring"
+
+level=info ts=2022-03-11T22:29:38.529937843Z caller=module_service.go:64 msg=initialising module=query-frontend
+
+level=info ts=2022-03-11T22:29:38.529998968Z caller=module_service.go:64 msg=initialising module=querier
+
+level=info ts=2022-03-11T22:29:38.56371676Z caller=compactor.go:259 msg="waiting until compactor is ACTIVE in the ring"
+
+level=info ts=2022-03-11T22:29:38.750977593Z caller=compactor.go:263 msg="compactor is ACTIVE in the ring"
+
+level=info ts=2022-03-11T22:29:38.751151468Z caller=loki.go:355 msg="Loki started"
+
+level=info ts=2022-03-11T22:29:41.531004053Z caller=scheduler.go:663 msg="this scheduler is in the ReplicationSet, will now accept requests."
+
+level=info ts=2022-03-11T22:29:41.531863261Z caller=worker.go:205 msg="adding connection" addr=172.28.0.4:9095
+
+level=info ts=2022-03-11T22:29:42.39427497Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:29:43.751251887Z caller=compactor.go:305 msg="this instance has been chosen to run the compactor, starting compactor"
+
+level=info ts=2022-03-11T22:29:43.751347221Z caller=compactor.go:332 msg="waiting 10m0s for ring to stay stable and previous compactions to finish before starting compactor"
+
+level=info ts=2022-03-11T22:29:47.393505625Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:29:48.534618375Z caller=frontend_scheduler_worker.go:100 msg="adding connection to scheduler" addr=172.28.0.4:9095
+
+level=info ts=2022-03-11T22:29:52.393828586Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:29:57.394131921Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:02.393672799Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:07.393562176Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:12.393681012Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:17.393769875Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:22.393055377Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:27.394389963Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:32.392852382Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:37.393331218Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:37.393451051Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:30:42.394988428Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:47.392346041Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:52.391929669Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:30:57.391926005Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:02.392338299Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:07.392539301Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:12.39487772Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:17.393511916Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:22.394128669Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:27.393305546Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:32.39430434Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:37.393450426Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:37.393541593Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:31:42.39353172Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:47.392333875Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:52.392063919Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:31:57.391788338Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:02.391508882Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:07.391750634Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:12.391885553Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:17.393166875Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:22.391791169Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:27.391986921Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:30.177277673Z caller=table_manager.go:181 msg="downloading all files for table index_19062"
+
+level=info ts=2022-03-11T22:32:32.392656757Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:37.402091093Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:32:37.402258884Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:38.807564135Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=9.374083ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.808898718Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=934.834µs status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.808971343Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=5.486ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.809341218Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=416.875µs status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.80961776Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=10.05525ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.809784302Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=1.869917ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.80987376Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=1.786834ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.809954843Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=11.582291ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.810206135Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=2.45525ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.811486718Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=584.417µs status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.811493177Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=1.21775ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.811575302Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=1.127042ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.811728343Z caller=metrics.go:92 org_id=fake latency=fast query="{filename=\"/var/log/install.log\"}" query_type=limited range_type=range length=1h0m0s step=2s duration=14.734667ms status=200 limit=1000 returned_lines=1000 throughput=22MB total_bytes=320kB
+
+level=info ts=2022-03-11T22:32:38.811732177Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=1.174ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.813522718Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=2.815959ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.813903302Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=2.787708ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.81549551Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=4.447583ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.815955468Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=4.780375ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.817393885Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=1.243792ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.817493177Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=3.490625ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.817797802Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=1.297708ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.817901802Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=1.131625ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.818863927Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=482.541µs status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.819298302Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=2.615625ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.819392052Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=2.369083ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.819394052Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=2.80925ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.819454885Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=2.737042ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.819504385Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=1.578542ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.819874135Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=2.642792ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.819474468Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=1.664041ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.821809677Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=2.117708ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.821864593Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=2.004957ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.821914802Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=29m0s step=1m0s duration=2.100875ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.822027677Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=1.274375ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.821818677Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=378.708µs status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.822360552Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=1.474834ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.823062927Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=1.667ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.823372218Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=924.917µs status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.823623843Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=2.807792ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.823646468Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=2.574375ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.823956385Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=995.584µs status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.824411927Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=1.858833ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.824693468Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=1.871791ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.824701385Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=940.333µs status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.82535001Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=2.553583ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.825488802Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=524µs status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.825505177Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=1.378667ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.825900093Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=27m0s step=1m0s duration=3.002083ms status=200 limit=1680 returned_lines=0 throughput=0B total_bytes=0B
+
+level=info ts=2022-03-11T22:32:38.838766427Z caller=metrics.go:92 org_id=fake latency=fast query="sum by(level)(count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=2m0s step=1m0s duration=30.977125ms status=200 limit=1680 returned_lines=0 throughput=210MB total_bytes=6.5MB
+
+ts=2022-03-11T22:32:38.839226552Z caller=spanlogger.go:87 org_id=fake Ingester.TotalReached=48 Ingester.TotalChunksMatched=1 Ingester.TotalBatches=70 Ingester.TotalLinesSent=35712 Ingester.HeadChunkBytes="25 kB" Ingester.HeadChunkLines=134 Ingester.DecompressedBytes="6.5 MB" Ingester.DecompressedLines=35578 Ingester.CompressedBytes="620 kB" Ingester.TotalDuplicates=0 Store.TotalChunksRef=0 Store.TotalChunksDownloaded=0 Store.ChunksDownloadTime=0s Store.HeadChunkBytes="0 B" Store.HeadChunkLines=0 Store.DecompressedBytes="0 B" Store.DecompressedLines=0 Store.CompressedBytes="0 B" Store.TotalDuplicates=0
+
+ts=2022-03-11T22:32:38.839269885Z caller=spanlogger.go:87 org_id=fake Summary.BytesProcessedPerSecond="153 MB" Summary.LinesProcessedPerSecond=839458 Summary.TotalBytesProcessed="6.5 MB" Summary.TotalLinesProcessed=35712 Summary.ExecTime=42.541708ms
+
+level=info ts=2022-03-11T22:32:38.839572718Z caller=metrics.go:92 org_id=fake latency=fast query="sum by (level) (count_over_time({filename=\"/var/log/install.log\"}[1m]))" query_type=metric range_type=range length=1h0m0s step=1m0s duration=42.541708ms status=200 limit=1680 returned_lines=0 throughput=153MB total_bytes=6.5MB
+
+level=info ts=2022-03-11T22:32:42.392457137Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:47.39186375Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:52.391537335Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:32:57.391759046Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:02.39101759Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:07.405558384Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:12.391445762Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:17.391978625Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:22.392703252Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:27.392367713Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:32.392402674Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:37.391846259Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:37.392107301Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:33:42.391946887Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:47.39343375Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:52.392576335Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:33:57.392993963Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:02.39325459Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:07.393536051Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:12.393857553Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:17.391859541Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:22.392371544Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:27.39162463Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:32.393467465Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:37.391932134Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:37.392218134Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:34:37.395587259Z caller=checkpoint.go:617 msg="starting checkpoint"
+
+level=info ts=2022-03-11T22:34:37.395890176Z caller=checkpoint.go:342 msg="attempting checkpoint for" dir=/loki/wal/checkpoint.000000
+
+level=info ts=2022-03-11T22:34:42.39243072Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:47.391954458Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:52.39151421Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:34:57.391530588Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:02.391726924Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:07.391294426Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:12.391176678Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:17.396524791Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:22.396003127Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:27.396787421Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:32.396312424Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:37.398970634Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:37.399020676Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:35:37.416876718Z caller=table.go:335 msg="uploading table index_19062"
+
+level=info ts=2022-03-11T22:35:37.416925384Z caller=table.go:362 msg="finished uploading table index_19062"
+
+level=info ts=2022-03-11T22:35:37.416935384Z caller=table.go:420 msg="cleaning up unwanted dbs from table index_19062"
+
+level=info ts=2022-03-11T22:35:42.396859512Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:47.390696041Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:52.390131835Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:35:57.390556588Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:02.391026674Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:07.390375426Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:12.391290303Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:17.39150425Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:22.390592002Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:27.391561671Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:32.39135934Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:37.394015468Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:36:37.394388593Z caller=table.go:335 msg="uploading table index_19062"
+
+level=info ts=2022-03-11T22:36:37.394420343Z caller=table.go:362 msg="finished uploading table index_19062"
+
+level=info ts=2022-03-11T22:36:37.394438301Z caller=table.go:420 msg="cleaning up unwanted dbs from table index_19062"
+
+level=info ts=2022-03-11T22:36:37.391598926Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:42.392453178Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:47.391743291Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:52.391611294Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:36:52.41144571Z caller=checkpoint.go:504 msg="atomic checkpoint finished" old=/loki/wal/checkpoint.000000.tmp new=/loki/wal/checkpoint.000000
+
+level=info ts=2022-03-11T22:36:52.413509544Z caller=checkpoint.go:575 msg="checkpoint done" time=2m15.017768978s
+
+level=info ts=2022-03-11T22:36:57.391096505Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:02.395095215Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:07.394270426Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:12.391413803Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:17.390828583Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:22.391746377Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:27.391790546Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:32.393767257Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:37.391404676Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:37.391453593Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:37:37.392841009Z caller=table.go:335 msg="uploading table index_19062"
+
+level=info ts=2022-03-11T22:37:37.392883176Z caller=table.go:362 msg="finished uploading table index_19062"
+
+level=info ts=2022-03-11T22:37:37.392914426Z caller=table.go:420 msg="cleaning up unwanted dbs from table index_19062"
+
+level=info ts=2022-03-11T22:37:42.390807678Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:47.391669583Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:52.393599419Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:37:57.39101838Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:02.39102184Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:07.390490634Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:12.391044595Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:17.401123375Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:22.402069877Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:27.401966254Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:32.401504757Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:37.401234884Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:38:37.401513718Z caller=table.go:335 msg="uploading table index_19062"
+
+level=info ts=2022-03-11T22:38:37.401541176Z caller=table.go:362 msg="finished uploading table index_19062"
+
+level=info ts=2022-03-11T22:38:37.401558134Z caller=table.go:420 msg="cleaning up unwanted dbs from table index_19062"
+
+level=info ts=2022-03-11T22:38:37.401210051Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:42.402319428Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:47.391076166Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:52.390810919Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:38:57.391407213Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:02.39083484Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:07.391177468Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:12.391466178Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:17.390172791Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:22.392280585Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:27.389819046Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:32.390416132Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:37.392623259Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:39:37.392974051Z caller=table.go:335 msg="uploading table index_19062"
+
+level=info ts=2022-03-11T22:39:37.393005926Z caller=table.go:362 msg="finished uploading table index_19062"
+
+level=info ts=2022-03-11T22:39:37.393022884Z caller=table.go:420 msg="cleaning up unwanted dbs from table index_19062"
+
+level=info ts=2022-03-11T22:39:37.393486676Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:37.393612259Z caller=checkpoint.go:617 msg="starting checkpoint"
+
+level=info ts=2022-03-11T22:39:37.393987134Z caller=checkpoint.go:342 msg="attempting checkpoint for" dir=/loki/wal/checkpoint.000001
+
+level=info ts=2022-03-11T22:39:42.392624928Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:43.754051679Z caller=compactor.go:337 msg="compactor startup delay completed"
+
+level=info ts=2022-03-11T22:39:43.754325179Z caller=compactor.go:376 msg="compactor started"
+
+level=info ts=2022-03-11T22:39:47.390253458Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:52.389953169Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:39:57.389671713Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:02.388974549Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:07.389607801Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:12.389842678Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:17.388638583Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:22.388296835Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:27.388269379Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:32.388814799Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:37.388702884Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:37.388937259Z caller=table_manager.go:171 msg="uploading tables"
+
+level=info ts=2022-03-11T22:40:37.389035051Z caller=table.go:335 msg="uploading table index_19062"
+
+level=info ts=2022-03-11T22:40:37.389051843Z caller=table.go:362 msg="finished uploading table index_19062"
+
+level=info ts=2022-03-11T22:40:37.389063384Z caller=table.go:420 msg="cleaning up unwanted dbs from table index_19062"
+
+level=info ts=2022-03-11T22:40:42.393074387Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:47.3895425Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:52.391615752Z caller=table_manager.go:207 msg="syncing tables"
+
+level=info ts=2022-03-11T22:40:57.393719963Z caller=table_manager.go:207 msg="syncing tables"
+
+Search...
+Stick to bottom
