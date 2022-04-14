@@ -7,7 +7,7 @@ services:
   loki:
     image: grafana/loki:latest
     volumes:
-      - /Users/cniackz/loki/production:/home/loki/production
+      - <your-production-folder>:/home/loki/production
     ports:
       - "3100:3100"
     command: -config.file=/home/loki/production/loki.yaml
